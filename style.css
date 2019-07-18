@@ -1,0 +1,204 @@
+html, body {
+    min-width: 320px;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    font-family: 'Rancho', cursive;
+    display: grid;
+    background: url(images/background.jpg) center center;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 10% 1%;
+    grid-template-areas: 
+        "."
+        "game"
+        "buttons"
+        "footer";
+}
+
+h1 {
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+#title {
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+#game {
+    grid-area: game;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 7% 8% 28% 10% 28% 8% 13%;
+    grid-template-areas:
+        ". d-name ."
+        "d-wins d-wallet d-score"
+        "d-cards d-cards d-cards"
+        "total-wins moneybank score"
+        "p-cards p-cards p-cards"
+        "p-wins p-wallet p-score"
+        ". p-name .";
+    align-items: stretch;
+}
+
+#game-buttons {
+    grid-area: buttons;
+    padding-top: 10px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#moneybank {
+    grid-area: moneybank;
+    padding: 5px;
+    font-size: 25px;
+    color: rgb(216, 210, 151);
+    text-shadow: 1px 1px brown;
+}
+
+#moneybank img {
+    background-size: cover;
+    max-height:40vh;
+    
+    position: relative;
+    bottom: 200%;
+}
+
+#dealer {
+    grid-area: d-name;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#dealer-wins {
+    grid-area: d-wins;
+    font-size: 20px;
+}
+
+#dealer-cards {
+    grid-area: d-cards;
+}
+
+#dealer-cards img, #player-cards img {
+    background-color: white;
+    background-size: cover;
+    max-height:17vh;
+    margin: 2px;
+}
+
+#dealer-wallet {
+    grid-area: d-wallet;
+}
+
+#dealer-wallet, #player-wallet{
+    padding: 2px;
+    border: 1px solid rgb(216, 210, 151);
+    border-radius: 20px;
+	display: inline-block;
+    margin: auto;
+    background-color: brown;
+    font-weight: 600;
+}
+
+#dealer-score {
+    grid-area: d-score;
+    font-size: 20px;
+}
+
+#wins-board {
+    grid-area: total-wins;
+}
+
+#score-title {
+    grid-area: score;
+}
+
+#wins-board, #score-title, #player-cards, #dealer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#wins-board, #score-title{
+    font-size: 21px;
+    font-weight: bold;
+}
+
+#dealer-score, #dealer-wins, #dealer, #player-score, #player-wins, #player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#player {
+    grid-area: p-name;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#player-wins {
+    grid-area: p-wins;
+    font-size: 20px;
+}
+
+#player-cards {
+    grid-area: p-cards;
+}
+
+#player-wallet {
+    grid-area: p-wallet;
+    margin-top: 6px;
+}
+
+#player-score {
+    grid-area: p-score;
+    font-size: 20px;
+}
+
+.gameButtons {
+    display: none;
+}
+
+button {
+	-moz-box-shadow: inset 0px 1px 0px 0px #f9eca0;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #f9eca0;
+	box-shadow: inset 0px 1px 0px 0px #f9eca0;
+	background-color: #f0c911;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #e65f44;
+	display: inline-block;
+	cursor: pointer;
+	color: brown;
+	font-size: 13px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+    text-shadow: 0px 1px 0px #ded17c;
+}
+
+button:hover {
+	background-color: #f2ab1e;
+}
+
+h5 {
+   font-size: 8px;
+   margin-top: 10px;
+   margin-bottom: 10px; 
+}
+
+h4 {
+    margin-block-start: 0.33em;
+    margin-block-end: 0.33em;
+}
+
+
+
